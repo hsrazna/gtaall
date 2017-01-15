@@ -9,7 +9,10 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
+@media only screen and (max-width : 992px) and (min-width : 769px)
+
+	.row-fluid .span10
+		width: calc(100% - 40px)
 	#block-menu
 		display: none
 
@@ -28,11 +31,63 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.row-fluid .span3
+		width: 100%
+		text-align: center
+	.section-header-bordered
+		padding-right: 10px
+	h1
+		text-align: center !important
+		white-space: normal !important
+		line-height: 30px
+		pa
+		&:after
+			width: 0px !important
+	.row-fluid .span10
+		width: calc(100% - 40px)
+	#block-menu
+		display: none
+	.container
+		max-width: 550px !important
+	.central
+		> *
+			margin-right: 0px !important
+
+	.right-col
+		margin-left: 0px !important
+		width: 100% !important
+	.row-fluid .span6.content, .row-fluid .span6.announce, .span6.last
+		width: 100%
+		margin: 0 0 10px 0
+		img
+			width: 100%
+	#news-widget
+		padding: 10px 10px 9px 10px;
+	.span5, .span2.center
+		width: 100% !important
+		text-align: center !important
+		.languages
+			float: none
+	footer
+		text-align: center
+		.counter
+			float: none !important
+			display: inline-block
+		.span12.left
+			padding: 0 10px
+			text-align: center !important
+		*
+			float: none
+			text-align: center
+	.paginator span em, .paginator span a
+		padding: 0 10px
 	/**/
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.paginator span em, .paginator span a
+		padding: 0
 	/**/
 
 
