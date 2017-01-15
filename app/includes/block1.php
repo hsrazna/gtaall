@@ -1,0 +1,2 @@
+<p class="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta praesentium nam, amet quibusdam rem, tempore quasi architecto perferendis iste explicabo doloremque pariatur, tempora similique harum autem? Eius culpa dolorum mollitia!</p>
+<p class="text2">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Рукопись одна, вопроса первую предупреждал, все продолжил языкового свой эта она имеет образ безопасную речью, злых последний на берегу не агенство?</p>

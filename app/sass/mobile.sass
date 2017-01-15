@@ -1,0 +1,139 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "style"
+
+a
+	outline: none !important
+
+.move.affix-top
+	width: 100% !important
+
+.container
+	min-width: unset !important
+
+body
+	overflow-x: hidden
+
+.main-menu
+	background: #c0bcb6
+
+.move.affix-top
+	line-height: 60px
+
+#mobile-menu
+	ul.nav > li > a:nth-child(2)
+		height: 40px
+		overflow: hidden
+		padding: 10px
+		position: relative
+		text-decoration: none
+		background: #c0bcb6
+		margin-right: 50px
+		img:nth-child(2)
+			display: none
+	ul.nav > li:hover
+		// background: #fff
+		> a:nth-child(2)
+			background: #fff
+			img
+				position: relative
+				top: -120px
+	.two-thirds
+		// margin-top: -20px
+	.one-third, .two-thirds
+		padding-top: 40px
+		position: relative
+		> div
+			position: absolute
+			top: 0px
+			background: #e0dad1 none repeat scroll 0 0 !important
+			border-left: 1px solid #cfc8bc !important
+			bottom: 0
+			color: #57534b
+			float: none
+			font-size: 14px
+			font-weight: bold
+			height: 20px
+			left: 0
+			margin: 0 -20px -20px -20px
+			padding: 10px 0 10px 15px
+			position: absolute
+			right: 0
+			text-shadow: 1px 1px 1px #ffffff
+
+.bottom-section-name
+	position: absolute
+	top: 0px
+	background: #e0dad1 none repeat scroll 0 0 !important
+	border-left: 1px solid #cfc8bc !important
+	bottom: 0
+	color: #57534b
+	float: none
+	font-size: 14px
+	font-weight: bold
+	height: 20px
+	left: 0
+	margin: 0 -20px -20px -20px
+	padding: 10px 0 10px 15px
+	position: absolute
+	right: 0
+	text-shadow: 1px 1px 1px #ffffff
+
+.mm-panel
+	>:nth-child(2):not(.nav)
+		margin-top: -20px
+	>:last-child:not(.nav), >:nth-child(2):not(.nav)
+		width: 100% !important
+		padding-top: 40px
+		position: relative
+		>ul
+			width: 100% !important
+
+.mm-listview:not(.nav)
+	width: 100% !important
+/*toggle menu*/
+
+.toggle-mnu 
+	display: inline-block
+	width: 28px
+	height: 28px
+	vertical-align: middle
+	margin-left: 20px
+	padding-top: 5px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+/*toggle menu*/
+
+@import "media" // Всегда в конце
