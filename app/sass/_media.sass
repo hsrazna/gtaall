@@ -10,7 +10,8 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) and (min-width : 769px)
-
+	.main-menu
+		height: unset !important
 	.row-fluid .span10
 		width: calc(100% - 40px)
 	#block-menu
@@ -31,7 +32,13 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.block .header
+		text-align: center
+	.main-menu
+		height: unset !important
 	.row-fluid .span3
+		margin: 0 !important
+	.row-fluid .span3, .row-fluid .span7
 		width: 100%
 		text-align: center
 	.section-header-bordered
