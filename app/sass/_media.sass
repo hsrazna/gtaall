@@ -10,8 +10,10 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) and (min-width : 769px)
+	.right-col
+		display: none
 	.main-menu
-		height: unset !important
+		height: 60px !important
 	.row-fluid .span10
 		width: calc(100% - 40px)
 	#block-menu
@@ -32,6 +34,85 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	a[href="#filter-custom"]
+		display: none
+	.content-body .item-image
+		min-height: unset !important
+	#pagination-index
+		display: none
+	#pagination-index-mobile
+		padding-top: 10px
+		font-size: 14px
+		.az-next
+			display: inline-block
+			width: 33.33%
+			text-align: left
+			a
+				padding: 15px 20px
+				background: #aaa
+				font-weight: bold
+				color: #fff
+				text-decoration: none
+				&:hover
+					background: #ff6c24
+		.az-prev
+			display: inline-block
+			width: 33.33%
+			text-align: right
+			a
+				padding: 15px 20px
+				background: #aaa
+				font-weight: bold
+				color: #fff
+				text-decoration: none
+				&:hover
+					background: #ff6c24
+		.az-cur
+			display: inline-block
+			width: 33.33%
+			text-align: center
+			em
+				padding: 15px 20px
+				font-weight: bold
+				color: #fff
+				text-decoration: none
+	// ins
+	// 	display: none !important
+	// 	width: 100% !important
+	// 	*
+	// 		width: 100% !important
+	// iframe
+	// 	display: none
+	// 	width: 100% !important
+	// 	overflow: hidden
+	// 	*
+	// 		width: 100% !important
+	#filter-custom
+		.span6
+			width: 100%
+			margin-left: 0
+		.form-actions
+			padding: 20px
+			text-align: center
+	.comments .actions
+		text-align: center
+		.pull-right
+			float: none
+	#mod-media .media-preview
+		width: 49%
+		&:nth-child(2n+1)
+			margin-right: 1%
+			margin-left: 0
+		&:nth-child(2n)
+			margin-right: 0
+			margin-left: 0
+	#news-widget .announce
+		display: none !important
+	.right-col
+		display: none
+	.row-fluid.header
+		.span3, .span9.banner-content-top
+			display: none
 	#cheats-platform-select
 		a
 			display: block !important
@@ -45,9 +126,13 @@
 	.block .header
 		text-align: center
 	.main-menu
-		height: unset !important
+		height: 60px !important
 	.row-fluid .span3
 		margin: 0 !important
+	.row-fluid .span3.columns, .similar-mods .row-fluid .span3
+		width: 49%
+		&:nth-child(2n+1)
+			margin-right: 2% !important
 	.row-fluid .span3, .row-fluid .span7
 		width: 100%
 		text-align: center
@@ -101,10 +186,69 @@
 	/**/
 
 @media only screen and (max-width : 550px)
+	// .filters
+	// 	display: none
+	h3
+		text-align: center
+	div:not(div.pagination) table td
+			display: block
+	.filters .filter-view-list .columns > div
+		width: 100%
+		float: none
+		// padding: 0 30px
+		span
+			position: relative
+			display: block
+			&::before
+				content: ""
+				display: block
+				position: absolute
+				bottom: 1px
+				left: 0px
+				width: 100%
+				height: 2px
+				border-top: 1px dotted #666
+				z-index: 2
+			a
+				position: relative
+				z-index: 3
+				display: inline-block
+				vertical-align: bottom
+				background: #fff
+				padding-right: 10px
+				&::after
+					display: none
+				&::before
+					// content: ""
+					position: absolute
+					bottom: 3px
+					left: 0
+					width: calc(100% + 10px)
+					height: 3px
+					background: #fff
+					z-index: 2
+			sup
+				display: inline-block
+				top: unset
+				bottom: -11px
+				// height: 20px
+				background: #fff;
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					bottom: -3px
+					left: -8px
+					width: calc(100% + 15px)
+					height: 3px
+					background: #fff
+					z-index: 2
+
 	h2
 		text-align: center
 	.gta-5-cheat
 		text-align: center
+		height: unset !important
 		.gta-5-cheat-image
 			margin-right: 0
 			float: none
@@ -114,8 +258,29 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	#mod-download .dropdown-toggle
+		height: 64px
+	.category .table td
+		display: block
+	#mod-media .media-preview
+		width: 100%
+		&:nth-child(2n+1)
+			margin-right: 0
+			margin-left: 0
+		&:nth-child(2n)
+			margin-right: 0
+			margin-left: 0
+	#mod-download a.btn
+		width: 100%
+		height: unset
+		text-align: center !important
+		box-sizing: border-box
 	.paginator span em, .paginator span a
 		padding: 0
+	.row-fluid .span3.columns, .similar-mods .row-fluid .span3
+		width: 100%
+		&:nth-child(2n+1)
+			margin-right: 0% !important
 	/**/
 
 
@@ -138,7 +303,10 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
+	#pagination-index-mobile
+		display: none
 	/**/
+	
 
 
 /* Medium Devices, Desktops */

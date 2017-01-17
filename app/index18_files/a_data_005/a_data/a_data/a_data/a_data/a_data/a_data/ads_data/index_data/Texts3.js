@@ -1,0 +1,10 @@
+var text1   = "УНИЧТОЖЬ";
+var text1_1 = "ПРОТИВНИКА";
+var text2   = "НЕПРОСТО";
+var text2_2 = "ПОПАСТЬ?";
+var text3   = "ТРЕНИРУЙСЯ";
+var text3_2 = "В БОЮ!";
+var text4   = "ПОЗДРАВЛЯЕМ!";
+var text4_2 = "";
+var text5   = "ТЫ ГОТОВ";
+var text5_2 = "К БОЮ!";
