@@ -34,14 +34,121 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.modal
+		max-width: 100% !important
+		margin-left: 0 !important
+		transform: translate(-50%, 0)
+		.form-horizontal .control-label
+			width: 140px
+		.form-horizontal .controls
+			margin-left: 150px
+	.filters .tab-content
+		display: none
+	div[id$="-mobile"]
+		background: #fff
+		width: 100%
+		float: none
+		padding: 30px
+		box-sizing: border-box
+		.column
+			display: inline
+			span
+				display: inline
+				sup
+					display: none
+		span
+			position: relative
+			display: block
+			// &::before
+			// 	content: ""
+			// 	display: block
+			// 	position: absolute
+			// 	bottom: 1px
+			// 	left: 0px
+			// 	width: 100%
+			// 	height: 2px
+			// 	border-top: 1px dotted #666
+			// 	z-index: 2
+			a
+				position: relative
+				z-index: 3
+				display: inline-block
+				vertical-align: bottom
+				background: #fff
+				padding-right: 10px
+				cursor: pointer
+				&::after
+					display: none
+				&::before
+					// content: ""
+					position: absolute
+					bottom: 3px
+					left: 0
+					width: calc(100% + 10px)
+					height: 3px
+					background: #fff
+					z-index: 2
+			strong
+				padding-right: 10px
+			sup
+				display: inline-block
+				top: unset
+				bottom: -11px
+				// height: 20px
+				background: #fff;
+				position: relative
+				font-size: 100%
+				float: right
+				vertical-align: middle
+				&::before
+					content: ""
+					position: absolute
+					bottom: -3px
+					left: -8px
+					width: calc(100% + 15px)
+					height: 3px
+					background: #fff
+					z-index: 2
+
+	.filters
+		.nav
+			border-bottom: none
+			li
+				display: block
+				width: 100%
+				margin-top: 5px
+				a:first-child
+					display: none
+			a
+				text-align: center
+				// width: 100%
+				color: #555
+				background: #fff
+				border: 1px solid #ddd
+				font-size: 14px
+				border-radius: 4px
+				font-weight: bold
+				text-decoration: none
+				cursor: pointer
+				&:hover
+					border: 1px solid #ddd
+					background: #aaa
+					color: #fff
+
+
+		.tab-content
+			padding: 0px !important;
+			border: none;
 	#filter-custom
 		display: none !important
 	a[href="#filter-custom"]
 		display: none !important
 	.content-body .item-image
 		min-height: unset !important
-	#pagination-index
-		display: none
+	.paginator:not([id="pagination-index-mobile"])
+		// display: none
+		overflow: hidden;
+		height: 0px;
 	#pagination-index-mobile
 		padding-top: 10px
 		font-size: 14px
@@ -49,6 +156,9 @@
 			display: inline-block
 			width: 33.33%
 			text-align: left
+			vertical-align: bottom
+			&::before
+				display: none
 			a
 				padding: 15px 20px
 				background: #aaa
@@ -61,6 +171,9 @@
 			display: inline-block
 			width: 33.33%
 			text-align: right
+			vertical-align: bottom
+			&::before
+				display: none
 			a
 				padding: 15px 20px
 				background: #aaa
@@ -73,7 +186,11 @@
 			display: inline-block
 			width: 33.33%
 			text-align: center
+			vertical-align: bottom
+			&::before
+				display: none
 			em
+				display: inline-block
 				padding: 15px 20px
 				font-weight: bold
 				color: #fff
@@ -194,57 +311,8 @@
 		text-align: center
 	div:not(div.pagination) table td
 			display: block
-	.filters .filter-view-list .columns > div
-		width: 100%
-		float: none
-		// padding: 0 30px
-		span
-			position: relative
-			display: block
-			&::before
-				content: ""
-				display: block
-				position: absolute
-				bottom: 1px
-				left: 0px
-				width: 100%
-				height: 2px
-				border-top: 1px dotted #666
-				z-index: 2
-			a
-				position: relative
-				z-index: 3
-				display: inline-block
-				vertical-align: bottom
-				background: #fff
-				padding-right: 10px
-				&::after
-					display: none
-				&::before
-					// content: ""
-					position: absolute
-					bottom: 3px
-					left: 0
-					width: calc(100% + 10px)
-					height: 3px
-					background: #fff
-					z-index: 2
-			sup
-				display: inline-block
-				top: unset
-				bottom: -11px
-				// height: 20px
-				background: #fff;
-				position: relative
-				&::before
-					content: ""
-					position: absolute
-					bottom: -3px
-					left: -8px
-					width: calc(100% + 15px)
-					height: 3px
-					background: #fff
-					z-index: 2
+	// .filters .filter-view-list .columns > div
+
 
 	h2
 		text-align: center
@@ -260,6 +328,46 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.user-edit
+		.nav-tabs > li > a
+			padding-right: 4px;
+			padding-left: 4px;
+			margin-right: 0px;
+		.form-horizontal .control-label
+			display: block
+			width: 100%
+			float: none
+			text-align: left
+		.form-horizontal .controls
+			margin-left: 0
+			width: calc(100% - 12px)
+			> input
+				width: 100%
+				// box-sizing: border-box
+		.form-actions
+			padding-left: 20px
+			text-align: center
+		.settings_wrapper
+			.controls
+				margin-left: 0
+				width: 100% !important
+				div
+					width: 100%
+	.modal-footer
+		text-align: center
+		>*
+			margin-bottom: 5px !important
+			margin-top: 5px !important
+		.pull-left
+			float: none
+	.oauth-providers
+		clear: both
+		display: block !important
+	div[id$="-mobile"]
+		background: #fff
+		padding: 40px 10px
+		.form-horizontal .controls
+			margin-left: 160px
 	#mod-download .dropdown-toggle
 		height: 64px
 	.category .table td
@@ -273,7 +381,7 @@
 			margin-right: 0
 			margin-left: 0
 	#mod-download a.btn
-		width: 100%
+		// width: 100%
 		height: unset
 		text-align: center !important
 		box-sizing: border-box
@@ -311,6 +419,11 @@
 		display: none
 	a[href="#filter-custom-mobile"]
 		display: none !important
+	.filters
+		.nav
+			li:not(.pull-right)
+				a:last-child
+					display: none
 	/**/
 	
 

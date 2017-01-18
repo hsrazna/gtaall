@@ -4,6 +4,14 @@
 @import "vars"
 @import "style"
 
+.mm-listview:not(.nav) > li > a
+	padding: 0px 10px 0px 25px !important
+	margin: 20px 0 10px 0 !important
+	display: block
+.mm-listview:not(.nav) > li::after
+	bottom: -10px !important
+	clear: both
+
 #filter-custom-mobile
 	background: #fff
 	padding: 30px
@@ -18,9 +26,13 @@
 	text-align: center !important
 a
 	outline: none !important
+	cursor: pointer !important
 
 .move.affix-top
 	width: 100% !important
+.move.affix
+	// width: 100% !important
+	background: #c0bcb6
 
 .container
 	min-width: unset !important
@@ -35,8 +47,11 @@ body
 
 .move.affix-top
 	line-height: 60px
+.move.affix
+	line-height: 60px
 
 #mobile-menu
+	z-index: 2
 	ul.nav > li > a:nth-child(2)
 		height: 40px
 		overflow: hidden
